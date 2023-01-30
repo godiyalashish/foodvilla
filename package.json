@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "food app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godiyalashish/foodvilla.git"
+  },
+  "author": "Ashish Godiyal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/godiyalashish/foodvilla/issues"
+  },
+  "homepage": "https://github.com/godiyalashish/foodvilla#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
