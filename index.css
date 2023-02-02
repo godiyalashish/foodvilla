@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    border: 1px solid black;
+}
+.logo{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.nav-items > ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav-items > ul > li {
+    padding : 10px;
+}
+
+.restaurant-cards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+
+}
+.restaurant-card {
+    border: 1px solid black;
+    padding: 5px;
+    width:17%;
+    align-items: center;
+}
+.restaurant-card > img {
+    height: 9rem;
+    width: auto;
+}
+
+.search-container{
+    margin: 1rem;
+}
+
