@@ -756,3 +756,5 @@ export const Restaurants = [
 ];
 
 export const imgLink = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+
+export const GET_RESTAURANT_MENU = 'https://www.swiggy.com/dapi/menu/v4/full?lat=28.6457831&lng=77.138989&menuId=';
