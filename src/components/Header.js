@@ -16,7 +16,7 @@ const Header = () =>{
     const isOnline = useOnline();
     const cartItems = useSelector(store => store.cart.count)
     return(
-    <div className="flex justify-between items-center p-2 bg-pink-50 shadow-lg">
+    <div className="flex justify-between items-center p-2 bg-pink-50 shadow-lg fixed top-0 left-0 right-0 z-10">
         <Title/>
         <div className="nav-items">
             <ul className="flex" >
@@ -33,6 +33,7 @@ const Header = () =>{
         }
         
     </div>
+    
 )}
 
 export default Header;

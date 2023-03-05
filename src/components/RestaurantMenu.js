@@ -16,15 +16,20 @@ const RestaurantMenu = () =>{
     }
 
     return (!restauraunt) ? <Shimmer /> :(
-        <div className="res_details">
-            <div className="Restaurant_details p-3">
-                <h1 className="text-3xl font-bold">{restauraunt.name}</h1>
-                <img className="m-2" src={imgLink+restauraunt.cloudinaryImageId}/>
-                <h2 className="text-xl font-bold">{restauraunt?.city}</h2>
-                <h2 className="text-xl font-bold">{restauraunt?.area}</h2>
-                <h2 className="text-xl font-bold">{restauraunt?.costForTwoMsg}</h2>
+        <div className="mt-24">
+            <div className="p-3 flex items-center bg-teal-900">
+                <div>
+                    <img className="m-2" src={imgLink+restauraunt.cloudinaryImageId}/>
+                </div>
+                <div className="flex flex-col text-white px-5 gap-x-4">
+                    <h1 className="text-5xl font-bold mb-3">{restauraunt.name}</h1>
+                    <h2 className="text-xl font-bold">{restauraunt?.city}</h2>
+                    <h2 className="text-xl font-bold">{restauraunt?.area}</h2>
+                    <h2 className="text-xl font-bold">Cost for two {restauraunt?.costForTwoMsg}</h2>
+                </div>
+                
             </div>
-            <div className="menu">
+            <div>
             <h2 className="text-2xl font-bold m-3 text-center">Menu</h2>
                 <div className="flex gap-x-7 gap-y-5 flex-wrap justify-center items-strech auto-rows-max auto-cols-max">
                     {

@@ -19,7 +19,9 @@
   "homepage": "https://github.com/godiyalashish/foodvilla#readme",
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@testing-library/react": "^14.0.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "jest": "^29.4.3",
     "parcel": "^2.8.3",
     "postcss": "^8.4.21",
     "process": "^0.11.10",

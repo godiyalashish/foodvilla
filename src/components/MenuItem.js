@@ -1,6 +1,6 @@
 import { imgLink } from "../../config";
 import { useDispatch } from "react-redux";
-import { addItem } from "../utils/cartSlice";
+import { addItem, remove, removeItem } from "../utils/cartSlice";
 
 const MenuItem = (props) =>{
     const dispatch = useDispatch();
@@ -9,7 +9,7 @@ const MenuItem = (props) =>{
     }
 
     const handelRemoveItem = (item) =>{
-        console.log("remove")
+        dispatch(removeItem(item));
     }
     return(
         <div className="flex p-2 rounded-lg bg-pink-50 shadow-lg ">
@@ -18,7 +18,7 @@ const MenuItem = (props) =>{
             </div>
             <div className="p-2">
                 <p className="text-lg font-bold">{props.name}</p>
-                <p className="text-lg">Price:{props.price}</p>
+                <p className="text-lg">Price: ₹{props.price/100}</p>
                 {(props.isVeg === 1) ? <p>Veg</p> : <p>Non-veg</p>}
                 <button className="p-2 bg-green-300 mt-2 rounded-lg hover:bg-green-600" onClick={() => handelAddItem(props)}>+ Add to cart</button>
                 <button className="p-2 bg-green-300 ml-1 rounded-lg hover:bg-green-600 " onClick={() => handelRemoveItem(props)}>- Remove from cart</button>

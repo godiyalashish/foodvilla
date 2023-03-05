@@ -22,16 +22,16 @@ const Body = () => {
         setFilterRestaurant(json?.data?.cards[2]?.data?.data?.cards);
     }
    
-    return (restaurantList.length === 0)? <Shimmer /> : (
+    return (restaurantList?.length === 0)? <Shimmer /> : (
     <>
-        <div className="p-2 my-2 bg-pink-50">
+        <div className="p-2 my-2 bg-pink-50 mt-20">
             <input className="p-2 ml-2 border-solid border-2 border-purple-400" placeholder="Search" value = {searchValue} onChange={(e)=>setSearchValue(e.target.value)}/>
             <button className="p-2 m-2 bg-purple-700 text-white rounded" onClick={()=>setFilterRestaurant(filterData(searchValue, restaurantList))}>Search</button>
 
         </div>
         <div className="my-4 flex flex-wrap items-strech justify-center gap-x-2 gap-y-3 auto-rows-max ">
             
-            {filterRestaurant.length === 0 ? <h1>No results found Search again!</h1> :
+            {filterRestaurant?.length === 0 ? <h1>No results found Search again!</h1> :
                 filterRestaurant.map((restaurant) =>{
                 return (
                             <RestaurantCard {...restaurant.data} key = {restaurant.data.id} />
