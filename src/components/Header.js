@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import { useSelector } from "react-redux";
@@ -7,7 +8,7 @@ import store from "../utils/store";
 
 const Title = () => (
     <a href="/" className="logo">
-        <h1 className="text-3xl font-bold py-2"> Food Villa</h1>
+        <img data-testid="logo" alt="logo" className="w-14 h-14" src={Logo}/>
     </a>
 );
 
@@ -24,10 +25,10 @@ const Header = () =>{
                <Link to={'/about'}><li className ="px-2">About</li></Link>
                <Link to={'/contact'}><li className ="px-2">Contact</li></Link>
                <Link to={'/mart'}><li className ="px-2">Mart</li></Link>
-               <Link to={'/cart'}><li className ="px-2">Cart-{cartItems}</li></Link>
+               <Link to={'/cart'}><li data-testid="cart" className ="px-2">Cart-{cartItems}</li></Link>
             </ul>
         </div>
-        <h1>{isOnline?"✅" : "❗"}</h1>
+        <h1 data-testid="isOnline-status">{isOnline?"✅" : "❗"}</h1>
         {
             (isLoggedIn) ? <button onClick={()=>setIsLoggedIn(false)}>Logout</button> : <button onClick={()=>setIsLoggedIn(true)}>Login</button>
         }

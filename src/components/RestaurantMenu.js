@@ -31,7 +31,7 @@ const RestaurantMenu = () =>{
             </div>
             <div>
             <h2 className="text-2xl font-bold m-3 text-center">Menu</h2>
-                <div className="flex gap-x-7 gap-y-5 flex-wrap justify-center items-strech auto-rows-max auto-cols-max">
+                <div data-testid="rest-menu" className="flex gap-x-7 gap-y-5 flex-wrap justify-center items-strech auto-rows-max auto-cols-max">
                     {
                         Object.values(restauraunt?.menu?.items).map(item =><MenuItem key={item.id} {...item} />)
                     }

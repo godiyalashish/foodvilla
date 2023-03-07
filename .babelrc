@@ -1,2 +1,7 @@
 //configuration for bable plugins.
-{}
+{
+    "presets": [
+        ["@babel/preset-env", {"targets": {"node": "current"}}],//jest will now understand es6
+        ["@babel/preset-react", {"runtime": "automatic"}] //jest will now understand jsx
+    ]
+}
