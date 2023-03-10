@@ -26,7 +26,7 @@ const Body = () => {
   return restaurantList?.length === 0 ? (
     <Shimmer />
   ) : (
-    <>
+    <div className="h-screen">
       <div className="p-2 my-2 bg-pink-50 mt-20">
         <input
             data-testid="search-input"
@@ -56,7 +56,7 @@ const Body = () => {
           })
         )}
       </div>
-    </>
+    </div>
   );
 };
 

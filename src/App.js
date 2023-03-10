@@ -14,6 +14,7 @@ import Profile from "./components/Profile";
 import { Provider } from "react-redux";
 import store from "./utils/store";
 import Cart from "./components/Cart";
+import Login from "./components/Login";
 
 const Mart = lazy(() => import('./components/Mart'))
 
@@ -63,6 +64,10 @@ const  appRouter = createBrowserRouter([
             {
                 path:"/cart",
                 element:<Cart/>
+            },
+            {
+                path:"/login",
+                element:<Login/>
             }
         ]
     }
